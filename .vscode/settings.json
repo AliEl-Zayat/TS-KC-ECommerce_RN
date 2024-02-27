@@ -1,0 +1,4 @@
+{
+  "deepscan.enable": true,
+  "npm-scripts.showStartNotification": false
+}
