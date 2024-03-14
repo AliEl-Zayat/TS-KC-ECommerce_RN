@@ -5,6 +5,19 @@ export type TCategory = {
   id?: number;
   title: string;
   prefix: string;
+};
+
+export type TSection = {
+  id?: number;
+  title: string;
+  prefix: string;
+  img: string;
+  discount: number;
+};
+
+export type TBanner = {
+  id?: number;
+  title: string;
   img: string;
 };
 

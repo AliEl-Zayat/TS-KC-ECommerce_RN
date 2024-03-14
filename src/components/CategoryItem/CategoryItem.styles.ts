@@ -1,21 +1,20 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export default function getStyles() {
   return StyleSheet.create({
     container: {
       alignItems: 'center',
       justifyContent: 'center',
-      gap: 12,
-    },
-    image: {
-      width: '100%',
-      aspectRatio: 1,
-      overflow: 'hidden',
-      borderRadius: 100,
+      paddingHorizontal: 11,
+      marginVertical: 10,
+      borderRadius: 6,
     },
     title: {
       textTransform: 'uppercase',
       textAlign: 'center',
+    },
+    activeButton: {
+      backgroundColor: '#dddddd73',
     },
   });
 }

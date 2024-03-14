@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TextProps, TextStyle} from 'react-native';
+import { Text, TextProps, TextStyle } from 'react-native';
 import getStyles from './Typography.styles';
 
 interface ITypography extends TextProps {
@@ -8,7 +8,7 @@ interface ITypography extends TextProps {
   style?: TextStyle;
 }
 
-export default function Typography({children, size, style}: ITypography) {
+export default function Typography({ children, size, style }: ITypography) {
   const styles = getStyles();
 
   const styledText = {

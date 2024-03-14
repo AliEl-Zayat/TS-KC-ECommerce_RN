@@ -1,20 +1,29 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import { View } from 'react-native';
 import getStyles from './Header.styles';
-import {Typography} from '@src/components';
-import {HeaderBasket} from '@src/components/ecommerce';
+import { HeaderBasket } from '@src/components/ecommerce';
+import { HambergerMenu, SearchNormal1 } from 'iconsax-react-native';
+import Logo from '@src/assets/icons/Logo';
+import Button from '../Button';
 
 export default function Header() {
   const styles = getStyles();
   return (
     <View style={styles.container}>
-      <View style={styles.logo}>
-        <Typography size={26}>our</Typography>
-        <View style={styles.logoSpan}>
-          <Typography size={26}>eCom</Typography>
-        </View>
+      <View style={styles.menuIconContainer}>
+        <Button onPress={() => {}}>
+          <HambergerMenu size="32" color="#ffffff" />
+        </Button>
       </View>
-      <HeaderBasket />
+      <View style={styles.logo}>
+        <Logo color="#fff" />
+      </View>
+      <View style={styles.buttonsContainer}>
+        <Button onPress={() => {}}>
+          <SearchNormal1 size="20" color="#ffffff" />
+        </Button>
+        <HeaderBasket />
+      </View>
     </View>
   );
 }

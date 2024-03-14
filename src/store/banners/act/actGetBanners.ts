@@ -1,15 +1,15 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { TCategory } from '@src/types';
+import { TBanner } from '@src/types';
 import axios from 'axios';
 
-type TResponse = TCategory[];
+type TResponse = TBanner[];
 
-const actGetCategories = createAsyncThunk(
-  'categories/actGetCategories',
+const actGetBanners = createAsyncThunk(
+  'categories/actGetBanners',
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await axios.get<TResponse>(
-        'https://express-ts-server-lyart.vercel.app/categories',
+        'https://express-ts-server-lyart.vercel.app/banners',
       );
       return data;
     } catch (error) {
@@ -21,4 +21,4 @@ const actGetCategories = createAsyncThunk(
   },
 );
 
-export default actGetCategories;
+export default actGetBanners;
