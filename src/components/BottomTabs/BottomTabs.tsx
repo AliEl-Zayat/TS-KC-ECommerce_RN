@@ -1,12 +1,17 @@
-import React from 'react';
-import { View } from 'react-native';
-import getStyles from './BottomTabs.styles';
-import HomeIcon from '@src/assets/icons/HomeIcon';
-import Typography from '../Typography';
 import { Button } from '@components/common';
-import { ShopIcon, SettingIcon, ProfileIcon } from '@icons';
 import { StackActions } from '@react-navigation/native';
 import { useAppNavigation } from '@src/hooks/useAppNavigation';
+import {
+  Bag2,
+  Heart,
+  Menu,
+  Profile,
+  SearchNormal1,
+} from 'iconsax-react-native';
+import React from 'react';
+import { View } from 'react-native';
+import Typography from '../Typography';
+import getStyles from './BottomTabs.styles';
 
 type TBottomTabsProps = {
   routeName: string;
@@ -16,22 +21,32 @@ const navigationButtons = [
   {
     id: 0,
     name: 'Home',
-    icon: HomeIcon,
+    title: 'Shop',
+    icon: Menu,
   },
   {
     id: 1,
-    name: 'Categories',
-    icon: ShopIcon,
+    name: 'Search',
+    title: 'Search',
+    icon: SearchNormal1,
   },
   {
     id: 2,
-    name: 'Setting',
-    icon: SettingIcon,
+    name: 'Account',
+    title: 'Account',
+    icon: Profile,
   },
   {
     id: 3,
-    name: 'Profile',
-    icon: ProfileIcon,
+    name: 'Wishlist',
+    title: 'Wishlist',
+    icon: Heart,
+  },
+  {
+    id: 4,
+    name: 'Cart',
+    title: 'Cart',
+    icon: Bag2,
   },
 ];
 

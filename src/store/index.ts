@@ -3,19 +3,21 @@ import {
   FLUSH,
   PAUSE,
   PERSIST,
-  persistReducer,
-  persistStore,
   PURGE,
   REGISTER,
   REHYDRATE,
+  persistReducer,
+  persistStore,
 } from 'redux-persist';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import banners from './banners/bannersSlice';
 import cart from './cart/cartSlice';
 import categories from './categories/categoriesSlice';
+import mightLikeCategories from './categories/mightLikeCategoriesSlice';
+import collections from './collections/collectionsSlice';
 import products from './products/productsSlice';
 import sections from './sections/sectionsSlice';
-import banners from './banners/bannersSlice';
 
 const cartPersistConfig = {
   key: 'cart',
@@ -28,6 +30,8 @@ const rootReducer = combineReducers({
   products,
   sections,
   banners,
+  mightLikeCategories,
+  collections,
   cart: persistReducer(cartPersistConfig, cart),
 });
 
